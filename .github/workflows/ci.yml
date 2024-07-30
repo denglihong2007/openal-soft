@@ -69,7 +69,7 @@ jobs:
       run: |
         cd build
         mkdir archive
-        cp *.a archive/
+        cp *.a ./
 
     - name: Upload Archive
       uses: actions/upload-artifact@v3.1.2
