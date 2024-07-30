@@ -52,7 +52,7 @@ jobs:
         ctest
 
     - name: Create Archive
-      if: ${{ matrix.config.os == 'macos-latest' }}
+      if: ${{ matrix.config.os == 'macos-13' }}
       shell: bash
       run: |
         cd build
@@ -61,7 +61,7 @@ jobs:
 
     - name: Upload Archive
       uses: actions/upload-artifact@v3.1.2
-      if: ${{ matrix.config.os == 'macos-latest' }}
+      if: ${{ matrix.config.os == 'macos-13' }}
       with:
         name: soft_oal-${{matrix.config.name}}
         path: build/archive
